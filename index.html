@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">   <!--Hỗ trợ tiếng việt-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Duy Tan University</title>
+    <!-- thẻ link qua FILE CSS -->
+     <link rel="stylesheet" href="main.css">
+    <!-- CSS Internal -->
+    <style> 
+        h1{
+                color:red;
+                font-size: 50px;        
+        }
+    </style>
+</head>
+<body>
+    <h1>xin chao cac ban </h1> <!--heading-->
+    <p> chao sinh vien Duy Tân </p> <!--paragraph-->
+    <!-- src tức là source của ảnh, alt dùng khi ảnh bị lỗi   -->
+    <img src="https://cellphones.com.vn/sforum/wp-content/uploads/2024/01/anh-meme-31.jpg" alt="ảnh con cặc "> 
+    <!-- a tức là anchor(thẻ neo hay thẻ liên kết) -->
+     <a href="https://www.thegioididong.com/tin-tuc/cach-chinh-thanh-dock-tren-macbook-1427052"> Tới trang hướng dẫn thanh DOCK</a>
+     <!-- Thẻ ul(unordered list) or ol (hiển thị số ) -->  <!--Thẻ li (List item)-->
+      <ul>
+        <!-- CSS Inline -->
+        <li style="color:aquamarine;">Khi nào nên đi học ?</li>
+        <li>Trời mưa có nên nghỉ không</li>    
+      </ul>
+      <!-- thẻ table -->
+       <table>
+        <!-- table head -->
+        <thead>
+<th>STT</th>
+<th>Họ và Tên</th>
+<th>Địa Chỉ</th>
+        </thead>
+<!-- table body -->
+        <tbody>
+<tr> <!--table row : dãy -->
+   <td>1</td>
+   <td>Trần Mạnh Cường</td>
+   <td>Đà Nẵng</td>
+</tr>
+        </tbody>
+       </table>
+
+ <input type="text"> <!--Thẻ input : sinh ra 1 cái như nút (button/checkbox/radio) or text-->
+ <!-- thẻ button -->
+ <button>Làm đơn đăng nhập cái </button>
+<!-- thẻ div(Chỉ đơn giản tạo ra khối bao quanh các phần khác) -->
+ <div> </div>
+ <!-- Attribute : thuộc tính nằm trong thẻ mở -->
+  <p onclick=""> Attribute</p>
+  <!-- 3 cách sử dụng CSS (Internal/External/Inline) -->
+   <!-- ID và Class(Trỏ tới ID : # + tên ID / Trỏ tới Class : . + tên class) -->
+   <h1 id="so1"> Xin chào tất cả các bạn  </h1>
+   <h2 class="so2"> Duy Tan Stock Company</h2>
+   <!-- .bitch.fuck(ở giữa không có dấu cách, được sử dụng khi muốn tách biệt 1 thằng trong tất cả những thằng có chung tên trong class  -->
+    <h3 class="bitch fuck"> Vua hải tặc</h3>
+    <h3 class="bitch">Zoro & Luffy</h3>
+   <!-- .box .testing (ở giữa 2 class có dấu cách, class box là cha và class testing là con) -->
+    <div class="box">
+        <h3 class="testing"> One Piece</h3> 
+    </div>
+    <!--element > element/vidu : div > p(Chọn tất cả các thẻ p là con trực tiếp của thẻ div  -->
+    <div class="post">
+        <h2 class="ting"> CSS Selectors cơ bản </h2>
+        <div class="post">
+                <h1 class="line">  Cập nhật tháng 1/2023 </h2>
+                </div>
+                <a href="https://www.w3schools.com/cssref/css_selectors.asp"> Link tham khảo CSS Seletors </a>
+    </div>
+
+    <!-- element + element/Ex : div + p (Chon the p dung lien ke sau the div)-->
+     <div class="front">
+        <h2>Đằng Trước</h2>
+     </div>
+     <p class="after"> Đằng Sau</p>
+     <!-- element ~ element/Ex : div ~ p(Chon tat ca the p dung sau the div) -->
+<div class="front1">
+        <h2>Đằng nao cung vay</h2>
+     </div>
+     <h3></h3>
+     <p class="after1"> Đằng nay cung quao</p>
+    <!-- phân biệt thẻ inline và thẻ block -->
+     <!-- thẻ block(chiếm hết hàng hàng và xếp chống lên nhau ) -->
+     <p style="background-color:aquamarine"> IS385</p>
+     <p style="background-color:bisque"> Kỹ thuật thương mại điện tử</p>
+     <!-- thẻ Inline(chỉ chiếm bằng data và xếp liền kề) -->
+      <span style="background-color: brown;"> Kỹ thuật thương mại điện tử </span>
+      <span style="background-color: red;">IS385 </span>
+</body>
+</html>

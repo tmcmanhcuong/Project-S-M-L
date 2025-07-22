@@ -1,0 +1,47 @@
+/* CSS belike Cascading Style Sheet */
+/*CSS External  */
+h1{
+    color:red 
+}
+p {
+    color : blue ;
+    font-style: italic;
+}
+.so2 {
+    color :burlywood
+}
+.bitch{
+    color:bisque;
+    font-size: 50px;
+}
+/* dấu (*) áp dụng lên tất cả các thẻ ở trong trang */
+*  {
+    color: green ;
+}
+/* element.class */
+h1#so1{
+    color: yellow ;
+}
+/* element > element/vidu : div > p(Chọn tất cả các thẻ p là con trực tiếp của thẻ div */
+div > h2 {
+    color:brown
+}
+/* nên đặt class cha chỉ xuất hiện 1 lần thôi */
+/* Độ ưu tiên trong CSS 
+ - Internal = External
+ - Inline - 1000
+ - #id -100
+ - .class -10
+ - tag - 1
+ - Equal specificity - khi có 2 cái = điểm nhau thì ưu tiên thằng mới được viết
+ - *(Universal selector and inherited - 0  */
+ /* mạnh hơn tất cả cái trên  */
+ a {
+    color: yellowgreen !important
+ }
+.front + .after {
+ color : lightcoral;
+}
+.front1 ~ .after1{
+    color:cornflowerblue
+}
