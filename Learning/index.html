@@ -12,9 +12,39 @@
                 color:red;
                 font-size: 50px;        
         }
+        a:after{
+              content: "(" attr(href) ")" 
+        }
+        .line:active{
+                color : whitesmoke
+        }
+        li:first-child{
+                color : red
+        }
+        li:last-child{
+                color: aquamarine;
+        }
+        #so1::first-letter{
+font-size: 20px;
+        }
+        #so1::first-line{
+                font-size: smaller;
+                color: #000;
+        }
+        #so1::selection{
+                color: #000;
+                background-color: blueviolet;
+        }
     </style>
 </head>
 <body>
+ <div class="box">      
+ </div>
+ <div class="box2">  
+ Day la trang luyen tap cua Cuong
+ <div class="box3"> 
+ </div>
+ </div>
     <h1>xin chao cac ban </h1> <!--heading-->
     <p> chao sinh vien Duy Tân </p> <!--paragraph-->
     <!-- src tức là source của ảnh, alt dùng khi ảnh bị lỗi   -->
@@ -54,13 +84,14 @@
   <p onclick=""> Attribute</p>
   <!-- 3 cách sử dụng CSS (Internal/External/Inline) -->
    <!-- ID và Class(Trỏ tới ID : # + tên ID / Trỏ tới Class : . + tên class) -->
-   <h1 id="so1"> Xin chào tất cả các bạn  </h1>
+   <h1 id="so1"> Xin chào tất cả các bạn  <br>
+      Đây là trang học của Mạnh Cường </h1>
    <h2 class="so2"> Duy Tan Stock Company</h2>
    <!-- .bitch.fuck(ở giữa không có dấu cách, được sử dụng khi muốn tách biệt 1 thằng trong tất cả những thằng có chung tên trong class  -->
     <h3 class="bitch fuck"> Vua hải tặc</h3>
     <h3 class="bitch">Zoro & Luffy</h3>
    <!-- .box .testing (ở giữa 2 class có dấu cách, class box là cha và class testing là con) -->
-    <div class="box">
+    <div class="box1">
         <h3 class="testing"> One Piece</h3> 
     </div>
     <!--element > element/vidu : div > p(Chọn tất cả các thẻ p là con trực tiếp của thẻ div  -->
@@ -83,6 +114,16 @@
      </div>
      <h3></h3>
      <p class="after1"> Đằng nay cung quao</p>
+<!-- Đặt biến root toàn cục và CSS -->
+ <h4>
+        CSS root variable ?
+ </h4>
+ <h5>
+        Control Global Variable 
+ </h5>
+ <h6>
+        Change one time
+ </h6>
     <!-- phân biệt thẻ inline và thẻ block -->
      <!-- thẻ block(chiếm hết hàng hàng và xếp chống lên nhau ) -->
      <p style="background-color:aquamarine"> IS385</p>
@@ -90,5 +131,54 @@
      <!-- thẻ Inline(chỉ chiếm bằng data và xếp liền kề) -->
       <span style="background-color: brown;"> Kỹ thuật thương mại điện tử </span>
       <span style="background-color: red;">IS385 </span>
+
+      <!-- Absolute Units -->
+       <ul>
+        <li>px</li>
+        <li>pt</li>
+        <li>cm</li>
+        <li>mm</li>
+        <li>inch</li>
+        <li>pc</li>
+       </ul>
+       <!-- Relative Units -->
+        <ul>
+                <li>%</li>
+                <li>rem- thường được sử dụng hơn (phù thuộc vào thẻ HTML)</li>
+                <li>em (phụ thuộc vào thẻ gần nhất có atrribute chứa nó)</li>
+                <li>vw - viewport width</li>
+                <li>vh - viewport height</li>
+                <li>vmin</li>
+                <li>vmax</li>
+                <li>ex</li>
+                <li>ch</li>
+        </ul>
+         <!-- Css Functions -->
+          <ul>
+                <li>var()</li>
+                <li>linear-gradient()</li>
+                <li>rgba()</li>
+                <li>rgb()</li>
+                <li>calc()</li>
+                <li>attr</li>
+          </ul>
+          <!-- Ung dung cua ham attr -->
+           <a style="text-decoration: none;" href="https://mydtu.duytan.edu.vn">Link đăng nhập Duy Tân</a>
+           <!-- CSS Pseudo Classses -->
+            <ul type="square">
+                <li>:root</li>
+                <li>:hover</li>
+                <li>:active</li>
+                <li>:first-child</li>
+                <li>:last-child</li>
+            </ul>
+            <!-- CSS pseudo-elements -->
+             <ul>
+                <li>:before</li>
+                <li>:after</li>
+                <li>:first-letter</li>
+                <li>:first-line</li>
+                <li>:selection</li>
+             </ul>
 </body>
 </html>

@@ -1,0 +1,103 @@
+/* CSS belike Cascading Style Sheet */
+/*CSS External  */
+.box{
+    width: 100vw;
+    height:100px;
+    color :blue; 
+    background-color: brown;
+
+}
+.box::before{
+    content: "before";
+    width: 100px;
+    height: 32px;
+    display: block;
+    padding: 10px 12px 8px 14px;
+    justify-content: center;
+    background-color: beige;
+    border-radius: 12px;
+    border-width : 5px;
+    border-style: solid;
+    border-color: aquamarine;
+
+}
+.box::after{
+    content: "after";
+    width: 100px;
+    height: 50px;
+    display: block;
+    background-color: rgb(218, 218, 28);
+    margin-left: 100px;
+    align-content: center;
+}
+.box2{
+    width: 100px;
+    height: 150px;
+    background-color:beige;
+    margin-top: 30px;
+    margin-bottom: 250px;
+    padding: 20px;
+    border: 2px solid black;
+    box-sizing: border-box;   
+    /* dung box-sizing : border-box khi muon tao ra cac card,... voi kich thuoc co dinh du ben trong co padding hay border ra sao */
+}
+.box3{
+    width:100vw;
+    height: 400px;
+    background-image: linear-gradient(0,rgba(255,255,0,0.5),rgba(0,0,255,0.5)),
+    url(https://anhnghethuatvietnam2022.com/wp-content/uploads/2025/03/Hinh-anh-gai-xinh-2k10-de-thuong.webp);
+    background-size: 300px;
+    background-repeat: no-repeat;
+}
+
+h1{
+    color:red 
+}
+p {
+    color : blue ;
+    font-style: italic;
+}
+.so2 {
+    color :burlywood
+}
+.bitch{
+    color:bisque;
+    font-size: 50px;
+}
+/* dấu (*) áp dụng lên tất cả các thẻ ở trong trang */
+*  {
+    color: green ;
+}
+/* element.class */
+h1#so1{
+    color: yellow ;
+}
+/* element > element/vidu : div > p(Chọn tất cả các thẻ p là con trực tiếp của thẻ div */
+div > h2 {
+    color:brown
+}
+/* nên đặt class cha chỉ xuất hiện 1 lần thôi */
+/* Độ ưu tiên trong CSS 
+ - Internal = External
+ - Inline - 1000
+ - #id -100
+ - .class -10
+ - tag - 1
+ - Equal specificity - khi có 2 cái = điểm nhau thì ưu tiên thằng mới được viết
+ - *(Universal selector and inherited - 0  */
+ /* mạnh hơn tất cả cái trên  */
+ a {
+    color: yellowgreen !important
+ }
+.front + .after {
+ color : lightcoral;
+}
+.front1 ~ .after1{
+    color:cornflowerblue
+}
+:root{
+    --text-color: red;
+}
+h4,h5,h6 {
+color: var(--text-color);
+}
