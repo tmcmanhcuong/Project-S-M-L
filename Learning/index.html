@@ -8,9 +8,10 @@
      <link rel="stylesheet" href="main.css">
     <!-- CSS Internal -->
     <style> 
-        h1{
+      h1{
                 color:red;
-                font-size: 50px;        
+                font-size: 50px;  
+                margin-top: 600px;      
         }
         a:after{
               content: "(" attr(href) ")" 
@@ -35,10 +36,45 @@ font-size: 20px;
                 color: #000;
                 background-color: blueviolet;
         }
+        h1{
+                /* Relative - Phụ thuộc chính nó – vị trí gốc của nó trong flow */
+                position: relative; 
+                top:100px;left: 150px;
+
+        }
+         .header{
+                /* width:300px; */
+                height: 50px;
+                background-color: #000;
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+        }
+        .box{
+                width: 100vw;
+                height:100px;
+                color :blue; 
+                background-color: brown;
+                position: relative;
+        }
+        .box1{
+                width: 100px;
+                height:50px;
+                background-color: aliceblue;
+                /* Absolute - Phụ thuộc phần tử cha gần nhất có position (relative, absolute, fixed, sticky) */
+                position: absolute;
+                /* top:0; */
+                /* left: 0; */
+                right: 0;
+        }
+       
     </style>
 </head>
 <body>
- <div class="box">      
+<div class="header"></div>
+ <div class="box">   
+        <div class="box1"></div>   
  </div>
  <div class="box2">  
  Day la trang luyen tap cua Cuong
@@ -91,9 +127,9 @@ font-size: 20px;
     <h3 class="bitch fuck"> Vua hải tặc</h3>
     <h3 class="bitch">Zoro & Luffy</h3>
    <!-- .box .testing (ở giữa 2 class có dấu cách, class box là cha và class testing là con) -->
-    <div class="box1">
+    <!-- <div class="box1">
         <h3 class="testing"> One Piece</h3> 
-    </div>
+    </div> -->
     <!--element > element/vidu : div > p(Chọn tất cả các thẻ p là con trực tiếp của thẻ div  -->
     <div class="post">
         <h2 class="ting"> CSS Selectors cơ bản </h2>
@@ -180,5 +216,12 @@ font-size: 20px;
                 <li>:first-line</li>
                 <li>:selection</li>
              </ul>
+             <!-- CSS Position -->
+              <ul>
+                <li>Relative</li>
+                <li>Absolute</li>
+                <li>Fixed</li>
+                <li>Sticky</li>
+              </ul>
 </body>
 </html>
