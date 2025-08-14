@@ -1,0 +1,84 @@
+/* Reset CSS */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-family:'Lucida Sans',sans-serif ;
+}
+#main{
+    
+}
+#header{
+    width: 100vw;
+    height: 46px;
+    display: block;
+    color: white;
+    background-color: rgb(0, 0, 0);
+}
+#nav {
+    position:relative;
+}
+#nav li{
+    display: inline-block;
+    position: relative;
+}
+#nav li a , #nav .icon-search{
+    color: white;
+    /* thuộc tính dùng để bỏ gạch chân cho chữ */
+    text-decoration: none;   
+    /* Thuộc tính viết in hoa tất cả các chữ  */
+    text-transform: uppercase;
+    /* căn giữa bất kỳ cái nào một cách smart 46px là height của dadđy lớn nhất chứa nó */
+    line-height: 46px;
+    padding-left: 24px;
+    padding-right: 24px;
+    display: block;
+}
+/* đối với những class có khoảng hở thì phải chấm 2 lần như dưới đây */
+#nav .icon-search{
+    position: absolute;
+    top:0;
+    right:0;
+} 
+#nav .icon-search:hover{
+    background-color: rgb(255, 85, 0);
+}
+/* Muốn hover ở thẻ nào thì có thể đặt ở thẻ đó */
+#nav li:hover a , #nav .subnav li:hover{
+    color: black;
+    background-color: rgb(227, 217, 217);
+}
+#nav li:hover .subnav{
+    display: block;
+}
+#nav .subnav{
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 0 16px rgba(0, 0, 0,0.3) ;
+    display: none;
+}
+#nav .subnav li{
+    display: block;
+    line-height: 46px;
+    width: 200px;
+    padding-left: 24px;
+    color: black;
+}
+/* #nav .subnav li:hover{
+    background-color: rgb(227, 217, 217);
+} */
+#slider{
+  height: 400px;
+  /* background-color: rgb(194, 188, 188); */
+}
+#w3-slide-dislay{
+    display:block;
+}
+#content{
+
+}
+#footer{
+
+}
