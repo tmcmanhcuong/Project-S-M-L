@@ -6,6 +6,7 @@
 }
 html{
     font-family:'Lucida Sans',sans-serif ;
+    -webkit-text-size-adjust: auto;
 }
 #main{
     
@@ -14,8 +15,13 @@ html{
     width: 100vw;
     height: 46px;
     display: block;
-    color: white;
     background-color: rgb(0, 0, 0);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    /* làm cho header nổi lên  */
+    z-index: 1;
 }
 #nav {
     position:relative;
@@ -37,13 +43,16 @@ html{
     display: block;
 }
 /* đối với những class có khoảng hở thì phải chấm 2 lần như dưới đây */
-#nav .icon-search{
+/* #nav .fa.fa-search */
+#nav .icon-search{ 
     position: absolute;
     top:0;
     right:0;
 } 
 #nav .icon-search:hover{
     background-color: rgb(255, 85, 0);
+    /* thuộc tính để đổi hình con trỏ chuột */
+    cursor: pointer;
 }
 /* Muốn hover ở thẻ nào thì có thể đặt ở thẻ đó */
 #nav li:hover a , #nav .subnav li:hover{
@@ -70,14 +79,108 @@ html{
     background-color: rgb(227, 217, 217);
 } */
 #slider{
-  height: 400px;
-  /* background-color: rgb(194, 188, 188); */
+  /* nếu một dùng background-image thì phải kèm thuộc tính padding-top như dưới để height = 1/2 width
+  padding-top: 50% ; 
+  background: url('../img/chicago.jpg') top center / cover no-repeat; */
+  margin-top: 46px;
+  line-height: 0;
+  position: relative;
 }
-#w3-slide-dislay{
-    display:block;
+#slider .w3-display-bottom{
+    position: absolute;
+    line-height: normal;
+    text-align: center;
+    width: 100%;
+    bottom: 0;
+    padding: 32px 16px;
+    color: white;
+}
+#slider .w3-display-bottom p{
+    margin-top: 25px;
+    margin-bottom: 15px;
+    font-size: 15px;
 }
 #content{
 
+}
+#content .theband-content-container,.tour-content-container{
+    width: 800px;
+    margin: 0 auto;
+    padding: 64px 16px;
+}
+#content .section-heading,.section-sub-heading{
+    text-align: center;
+}
+#content .section-heading{
+    margin: 10px 0px;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 45px;
+    letter-spacing: 4px;
+}
+#content .section-sub-heading{
+    margin: 15px 0px;
+    font-size: 15px;
+    line-height: 22.5px;
+    font-style: italic;
+    color: gray;;
+}
+#content .detail{
+    margin: 15px 0px;
+    font-size: 14.5px;
+    text-align: justify;
+    line-height: 22.5px;
+}
+#content .theband-row{
+    padding: 32px 0px;
+}
+#content .theband-row .thirdimg{
+    text-align: center;
+    display: table-cell;
+}
+#content .theband-row .thirdimg p{
+    margin: 15px 0px;
+}
+#content .theband-row .thirdimg img{
+    width: 60%;
+    border-radius: 4px;
+    /* Căn chỉnh theo chiều dọc */
+    vertical-align: middle;
+    margin-bottom: 15px;
+}
+#content .tour{
+    background-color: black;
+}
+#content .tour-content-container{
+    color: white;
+}
+.tour-content-container .ul-block li{
+    list-style-type: none;
+    display: block;
+    line-height: 22.5px;
+    font-size: 15px;
+    color: rgb(117, 117, 117);
+    background-color: white;
+    padding: 8px 16px;
+    border: 0.5px solid #ccc;
+}
+.ul-block .w3-tag{
+    display: inline-block;
+    color: white;
+    padding: 0px 8px;
+    line-height: 22.5px;
+    margin-left: 16px;
+    background-color: rgb(244, 67, 54);
+}
+.ul-block .w3-tag-bottom{
+    color: white;
+    background-color: black;
+    float: right;
+    margin-right: 16px;
+    padding: 0 8px;
+    text-align: center;
+    line-height: 22.5px;
+    border-radius: 50%;
 }
 #footer{
 
