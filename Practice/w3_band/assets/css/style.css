@@ -4,15 +4,27 @@
     padding: 0;
     box-sizing: border-box;
 }
-html{
+html, body{
     font-family:'Lucida Sans',sans-serif ;
+    line-height: 1.5;
     -webkit-text-size-adjust: auto;
+    scroll-behavior: smooth;
 }
+/* Có 2 cách để dùng để scroll-behavior:smooth , cách dưới đây cũng được nhưng nhược điểm là nó giựt giựt*/
+/* enma/Downloads/VSCODE/FRONT END LEARNING/HTML & CSS/Practice/w3_band/assets/css/style.css
+html {
+    scroll-behavior: smooth;
+} */
 #main{
     
 }
+/* Sử dụng display:block và thuộc tính float thì phải kèm cái này - 
+nếu không kèm các thẻ con chứa thuộc tính float sẽ bị out ra khỏi container - hoặc dùng display:flexbox */
+.clear{
+    clear:both;
+}
 #header{
-    width: 100vw;
+    width: 100%;
     height: 46px;
     display: block;
     background-color: rgb(0, 0, 0);
@@ -47,7 +59,7 @@ html{
 #nav .icon-search{ 
     position: absolute;
     top:0;
-    right:0;
+    right:0; 
 } 
 #nav .icon-search:hover{
     background-color: rgb(255, 85, 0);
@@ -78,7 +90,7 @@ html{
 /* #nav .subnav li:hover{
     background-color: rgb(227, 217, 217);
 } */
-#slider{
+.slider{
   /* nếu một dùng background-image thì phải kèm thuộc tính padding-top như dưới để height = 1/2 width
   padding-top: 50% ; 
   background: url('../img/chicago.jpg') top center / cover no-repeat; */
@@ -86,7 +98,7 @@ html{
   line-height: 0;
   position: relative;
 }
-#slider .w3-display-bottom{
+.slider .w3-display-bottom{
     position: absolute;
     line-height: normal;
     text-align: center;
@@ -95,15 +107,12 @@ html{
     padding: 32px 16px;
     color: white;
 }
-#slider .w3-display-bottom p{
+.slider .w3-display-bottom p{
     margin-top: 25px;
     margin-bottom: 15px;
     font-size: 15px;
 }
-#content{
-
-}
-#content .theband-content-container,.tour-content-container{
+#content .theband-content-container,.tour-content-container,.contact-content-container, .footer{
     width: 800px;
     margin: 0 auto;
     padding: 64px 16px;
@@ -182,6 +191,111 @@ html{
     line-height: 22.5px;
     border-radius: 50%;
 }
-#footer{
-
+.tour-content-container .w3-card{
+    padding: 32px 8px;
+    margin: 0 -16px;
+    display:block;
+}
+.w3-card .w3-third-card{
+    padding: 0 8px;
+    margin-bottom: 16px;
+    width: 33.33333%;
+    float: left;
+    display: block;
+}
+.w3-third-card .w3-third-card-container{
+    padding: 0.15px 16px;
+    background-color:white;
+    color: black;
+}
+.w3-third-card img{
+    display: block;
+    /* Thẻ img không tự thu nhỏ kích thước theo div nên nhất định phải set width cho nó */
+    width:100%;
+}
+.w3-third-card img:hover{
+    opacity: 0.6;
+}
+.w3-third-card .w3-third-card-container p{
+    margin: 15px 0;
+    font-size: 15px;
+}
+.w3-third-card-container .card-opacity{
+    opacity: 0.6;
+}
+.w3-third-card .card-button, .contact-column.info-fill .fill-button{
+    padding: 8px 16px;
+    margin-bottom: 16px;
+    background-color: black;
+    color: white;
+    border-style: none;
+}
+.w3-third-card .card-button:hover , .contact-column.info-fill .fill-button:hover{
+    color:black;
+    cursor: pointer;
+    background-color:rgb(204, 204, 204) ;
+}
+.contact-content-container .contact-row{
+    display: block;
+    padding: 32px 0;
+}
+.contact-row .contact-column{
+    display: inline-block;
+    width: 50%;
+}
+.contact-row .contact-column.info i{
+    float: left;
+    width: 30px;
+    margin-top: 4px;
+}
+.contact-row .contact-column.info-fill{
+    display: block;
+    float: right;
+    overflow: auto;
+}
+.contact-column.info-fill .fill{
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid rgb(204, 204, 204);
+}
+.contact-column.info-fill .fill-infor{
+    display: block;
+    margin-bottom: 8px;
+}
+.contact-column.info-fill .fill.name{
+    /* padding: 16px 0; */
+    float: left;
+    width: 48%;
+}
+.contact-column.info-fill .fill.email{
+    float: right;
+    width: 48%;
+}
+.contact-column.info-fill .fill.message{
+    width: 100%;
+}
+.contact-column.info-fill .fill-button{
+    margin: 16px 0;
+    font-size: 16px;
+    float:right
+}
+.img-map img{
+    /* thẻ filter gán hiệu ứng */
+    filter: grayscale(50%);
+    width: 100%;
+}
+.footer{
+    text-align: center;
+}
+.footer i{
+    font-size: 24px;
+    opacity: 0.6;
+}
+.footer p{
+    font-size: 15px;
+    margin: 15px 0;
+    opacity: 0.6;
+}
+.footer p a{
+    color: black;
 }

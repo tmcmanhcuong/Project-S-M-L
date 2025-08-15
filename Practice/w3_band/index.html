@@ -13,8 +13,8 @@
             <nav>
                 <ul id="nav">
                     <li><a href="#home">Home</a></li>
-                    <li><a href="#about">Band</a></li>
-                    <li><a href="#services">Tour</a></li>
+                    <li><a href="#band">Band</a></li>
+                    <li><a href="#tour">Tour</a></li>
                     <li><a href="#contact">Contact</a></li>
                     <li> <a href="#more">More ▾</a>                   
                     <ul class="subnav">
@@ -27,7 +27,7 @@
                 </ul>
             </nav>
         </div>
-        <div id="slider">
+        <div class="slider" id="home">
                 <img src="./assets/img/chicago.jpg"alt="" style="width: 100%;">
                 <div class="w3-display-bottom">
                     <h3 style="font-size: 24px; font-weight: 500;">Chicago</h3>
@@ -37,7 +37,7 @@
 <!-- Content Section -->
         <div id="content">
             <!-- the band section -->
-            <div class="theband-content-container">
+            <div class="theband-content-container" id="band">
                 <h2 class="section-heading">THE BAND</h2>
                 <p class="section-sub-heading">We love music</p>
                 <p class="detail">We have created a fictional band website. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
@@ -54,11 +54,10 @@
                         <p>Name</p>
                         <img src="./assets/img/bandmember.jpg" alt="">
                     </div>
-
                   </div>
             </div>
             <!-- tour section -->
-             <div class="tour">
+             <div class="tour" id="tour">
              <div class="tour-content-container">
                 <h2 class="section-heading">TOUR DATES</h2>
                 <p class="section-sub-heading">Remember to book your tickets!</p>
@@ -74,10 +73,80 @@
                          <span class="w3-tag-bottom">3</span>
                     </li>
                 </ul>     
+                <div class="w3-card">
+                    <div class="w3-third-card">
+                        <img src="./assets/img/newyork.jpg" alt="">
+                        <div class="w3-third-card-container">
+                            <p>New York</p>
+                            <p class="card-opacity">Fri 27 Nov 2016</p>
+                            <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+                            <button class="card-button">Buy Tickets</button>
+                        </div>
+                    </div>
+                    <div class="w3-third-card">
+                        <img src="./assets/img/paris.jpg" alt="">
+                        <div class="w3-third-card-container">
+                            <p>Paris</p>
+                            <p class="card-opacity">Fri 28 Nov 2016</p>
+                            <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+                            <button class="card-button">Buy Tickets</button>
+                        </div>
+                    </div>
+                    <div class="w3-third-card">
+                        <img src="./assets/img/sanfran.jpg" alt="">
+                        <div class="w3-third-card-container">
+                            <p>San Francisco</p>
+                            <p class="card-opacity">Sun 29 Nov 2016</p>
+                            <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+                            <button class="card-button">Buy Tickets</button>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
     </div>
     </div>
-        <div id="footer">
-            <p>&copy; 2023 W3 Band. All rights reserved.</p>
+    <!-- Contact Section -->
+    <div class="contact-content-container" id="contact">
+                <h2 class="section-heading">CONTACT</h2>
+                <p class="section-sub-heading">Fan? Drop a note!</p>
+                <div class="contact-row">
+                    <div class="contact-column info">
+                     <i class="fa fa-map-marker"></i> 
+                     Chicago, US           
+                     <br>
+                     <i class="fa fa-phone"></i> 
+                     Phone: +00 151515
+                     <br>
+                     <i class="fa fa-envelope"></i>
+                     Email: mail@mail.com         
+                    </div>
+                     <div class="contact-column info-fill">
+                        <form action="">
+                        <div class="fill-infor">
+                        <input class="fill name" type="text" placeholder="Name">
+                          <input class="fill email" type="text" placeholder="Email">
+                           <div class="clear"></div>
+                        </div>
+                           <input class="fill message" type="text" placeholder="Message">
+                            </form>
+                               <button class="fill-button">SEND</button>
+                               
+                     </div>      
+                     <div class="clear"></div>            
+                </div>                
+            </div>
+    <!-- Map Section -->
+    <div class="img-map">
+        <img src="./assets/img/map.jpg" alt="">
+    </div>
+        <div class="footer">
+            <i class="fa fa-facebook-official w3-hover-opacity"></i>
+            <i class="fa fa-instagram w3-hover-opacity"></i>
+            <i class="fa fa-snapchat w3-hover-opacity"></i>
+            <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+            <i class="fa fa-twitter w3-hover-opacity"></i>
+            <i class="fa fa-linkedin w3-hover-opacity"></i>
+            <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
         </div>
     </div>
 </body>
