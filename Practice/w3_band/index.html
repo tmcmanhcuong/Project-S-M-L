@@ -8,7 +8,18 @@
     <title>W3-Brand</title>
 </head>
 <body>
+<!-- Nguyên tắc Stacking trong HTML/CSS là theo nguyên tắc LIFO 
+ - Thứ tự xếp chồng mặc định (từ dưới lên):
+1. Background/Borders
+2. Negative z-index
+3. Block elements (không có position)
+4. Floated elements
+5. Inline elements
+6. Position elements (relative/absolute/fixed) không có z-index
+7. Position elements có z-index > 0
+ -->    
     <div id="main">
+        <!-- Header Section-->
         <div id="header">
             <nav>
                 <ul id="nav">
@@ -27,6 +38,7 @@
                 </ul>
             </nav>
         </div>
+        <!-- Slider Section -->
         <div class="slider" id="home">
                 <img src="./assets/img/chicago.jpg"alt="" style="width: 100%;">
                 <div class="w3-display-bottom">
@@ -80,7 +92,7 @@
                             <p>New York</p>
                             <p class="card-opacity">Fri 27 Nov 2016</p>
                             <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                            <button class="card-button">Buy Tickets</button>
+                            <button class="card-button js-buy-ticket">Buy Tickets</button>
                         </div>
                     </div>
                     <div class="w3-third-card">
@@ -89,7 +101,7 @@
                             <p>Paris</p>
                             <p class="card-opacity">Fri 28 Nov 2016</p>
                             <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                            <button class="card-button">Buy Tickets</button>
+                            <button class="card-button js-buy-ticket">Buy Tickets</button>
                         </div>
                     </div>
                     <div class="w3-third-card">
@@ -98,7 +110,7 @@
                             <p>San Francisco</p>
                             <p class="card-opacity">Sun 29 Nov 2016</p>
                             <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                            <button class="card-button">Buy Tickets</button>
+                            <button class="card-button js-buy-ticket">Buy Tickets</button>
                         </div>
                     </div>
                     <div class="clear"></div>
@@ -149,5 +161,64 @@
             <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
         </div>
     </div>
+    </div>
+    <div class="popup js-popup">
+        <div class="popup-container js-popup-container">
+            <header class="popup-header">
+                <h2 class="Title">
+                    <i class="fa fa-suitcase"></i>
+                    Tickets
+                </h2>
+                <p class="button-display js-button-close">x</p>
+            </header>
+            <div class="popup-content">
+                <label for="" class="popup-label">
+                    <i class="fa fa-shopping-cart"></i>
+                    Tickets, $15 per person
+                </label>
+                <input type="text" name="" id=""placeholder="How many?">
+                <label for="" class="popup-label">
+                    <i class="fa fa-user"></i>
+                    Send To
+                </label>
+                <input type="text" placeholder="Enter email">
+
+                <button id="buy-tickets">
+                    PAY <i class="fa fa-check"></i>
+                </button>
+            </div>
+            <footer class="popup-footer">
+                Need <a href="">help?</a> 
+            </footer>
+       
+        </div>
+    </div>
+
+    <script>
+        const buyBtns = document.querySelectorAll('.js-buy-ticket')
+        const popup = document.querySelector('.js-popup')
+        const popupContainer = document.querySelector('.js-popup-container')
+        const btnClose = document.querySelector('.js-button-close')
+        // Hiển/Mở Pop Up
+        function showPopup(){
+           popup.classList.add('open')
+        }
+        for(const buyBTN of buyBtns){
+            buyBTN.addEventListener('click',showPopup)
+        }
+        // Tắt/Ẩn Pop Up
+        function hidePopup(){
+             popup.classList.remove('open')
+        }
+        btnClose.addEventListener('click',hidePopup)
+
+        // Tab out để đóng Pop up
+        popup.addEventListener('click',hidePopup)
+        // Chặn hành động từ những thằng bên trong cho tới thằng popup-container
+        popupContainer.addEventListener('click',function (event) {
+            event.stopPropagation()
+        })
+
+    </script>
 </body>
 </html>

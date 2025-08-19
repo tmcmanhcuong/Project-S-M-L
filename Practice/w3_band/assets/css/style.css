@@ -228,7 +228,8 @@ nếu không kèm các thẻ con chứa thuộc tính float sẽ bị out ra kh�
     margin-bottom: 16px;
     background-color: black;
     color: white;
-    border-style: none;
+    /* Bỏ đi cái border mặc định của thẻ button */
+    border-style: none; 
 }
 .w3-third-card .card-button:hover , .contact-column.info-fill .fill-button:hover{
     color:black;
@@ -298,4 +299,116 @@ nếu không kèm các thẻ con chứa thuộc tính float sẽ bị out ra kh�
 }
 .footer p a{
     color: black;
+}
+.popup{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background :rgba(0, 0, 0,0.4);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+.popup.open{
+    display: flex;
+}
+.popup-container{
+    background-color:white;
+    width: 900px;
+    min-height: 200px;
+    /* Thuộc tính animation với keyframes được tạo bên dưới */
+    animation: popup-animation ease .5s;
+}
+.popup-header{
+    color: white;
+    background-color: #009688;
+    position: relative;
+    height:130px;
+}
+.popup-header .button-display{
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: block;
+    font-size: 24px;
+    font-weight: 400;
+    padding: 8px 16px;
+}
+.popup-header .button-display:hover,.popup-content #buy-tickets:hover{
+    color: black;
+    background-color: #ccc!important;
+    cursor: pointer;
+}
+.popup-header .Title{
+    position: absolute;
+    left: 0;
+    right: 0;
+    font-size: 30px;
+    font-weight: 400;
+    display: flex;
+    /* Căn chỉnh items theo trục dọc - thuộc tính của Flexbox */
+    /* Ngoài ra còn có :
+    flex-start: Căn trên
+    flex-end: Căn dưới
+    stretch: Kéo dài để lấp đầy container (default)
+    */
+    align-items: center;
+    /* Căn chỉnh items theo trục ngang - thuộc tính của Flexbox 
+    Ngoài ra còn có
+    flex-start: Căn trái (default)
+    flex-end: Căn phải
+    space-between: Chia đều khoảng trống giữa các items
+    space-around: Chia đều khoảng trống xung quanh các items
+    */
+    justify-content: center;
+    line-height: 130px;
+}
+.popup-header .Title i{
+    margin-right: 16px;
+}
+.popup-content,.popup-footer{
+    position: relative;
+    padding: 0 16px;
+}
+.popup-content .popup-label {
+    display: block;
+    margin: 16px 0;
+    font-size: 16px;
+    width: 100%;
+}
+.popup-content input{
+    width:100%;
+    font-size: 16px;
+    padding: 8px;
+}
+.popup-content #buy-tickets{
+    display: block;
+    width: 100%;
+    padding: 16px;
+    margin: 16px 0;
+    border-style: none;
+    font-size: 16px;
+    background-color: #009688;
+    color: white;
+}
+.popup-container .popup-footer{
+    margin: 16px 0;
+    text-align: right;
+}
+.popup-container .popup-footer a {
+    color: #2196F3;
+}
+/* Làm hiệu ứng Transition */
+@keyframes popup-animation {
+    from{
+        opacity: 0;
+        transform: translateY(-140px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
