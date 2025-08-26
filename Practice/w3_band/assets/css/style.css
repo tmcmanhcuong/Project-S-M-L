@@ -34,6 +34,7 @@ nếu không kèm các thẻ con chứa thuộc tính float sẽ bị out ra kh�
     right: 0;
     /* làm cho header nổi lên  */
     z-index: 1;
+    /* Khi phần tử con vượt khỏi phần tử cha thì thực hiện một tác động nào đó*/
 }
 #nav {
     position:relative;
@@ -42,7 +43,7 @@ nếu không kèm các thẻ con chứa thuộc tính float sẽ bị out ra kh�
     display: inline-block;
     position: relative;
 }
-#nav li a , #nav .icon-search{
+#nav li a , #nav .icon-search, #nav .menu-button{
     color: white;
     /* thuộc tính dùng để bỏ gạch chân cho chữ */
     text-decoration: none;   
@@ -54,14 +55,17 @@ nếu không kèm các thẻ con chứa thuộc tính float sẽ bị out ra kh�
     padding-right: 24px;
     display: block;
 }
+#nav .menu-button{
+    display: none;
+}
 /* đối với những class có khoảng hở thì phải chấm 2 lần như dưới đây */
 /* #nav .fa.fa-search */
-#nav .icon-search{ 
+#nav .icon-search , #nav .menu-button { 
     position: absolute;
     top:0;
     right:0; 
 } 
-#nav .icon-search:hover{
+#nav .icon-search:hover, #nav .menu-button:hover{
     background-color: rgb(255, 85, 0);
     /* thuộc tính để đổi hình con trỏ chuột */
     cursor: pointer;
@@ -87,9 +91,7 @@ nếu không kèm các thẻ con chứa thuộc tính float sẽ bị out ra kh�
     padding-left: 24px;
     color: black;
 }
-/* #nav .subnav li:hover{
-    background-color: rgb(227, 217, 217);
-} */
+
 .slider{
   /* nếu một dùng background-image thì phải kèm thuộc tính padding-top như dưới để height = 1/2 width
   padding-top: 50% ; 
@@ -114,6 +116,7 @@ nếu không kèm các thẻ con chứa thuộc tính float sẽ bị out ra kh�
 }
 #content .theband-content-container,.tour-content-container,.contact-content-container, .footer{
     width: 800px;
+    max-width: 100%;
     margin: 0 auto;
     padding: 64px 16px;
 }
@@ -248,6 +251,9 @@ nếu không kèm các thẻ con chứa thuộc tính float sẽ bị out ra kh�
     float: left;
     width: 30px;
     margin-top: 4px;
+}
+.contact-row .contact-column.info a:hover{
+    opacity: 0.6;
 }
 .contact-row .contact-column.info-fill{
     display: block;
@@ -412,3 +418,4 @@ nếu không kèm các thẻ con chứa thuộc tính float sẽ bị out ra kh�
         transform: translateY(0);
     }
 }
+

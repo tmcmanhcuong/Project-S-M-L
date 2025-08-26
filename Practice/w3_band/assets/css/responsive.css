@@ -1,0 +1,75 @@
+/* BREAKPOINT
+   PC >= 1024px
+   Tablet >=740px & <1024px
+   Mobile <740px
+*/
+/* Tablet */
+@media (min-width:740px) and (max-width:1023px){
+
+}
+/* Mobile */
+@media (max-width:740px){
+    #header{
+        overflow: hidden;
+    }
+    #header.js-header.open{
+        height: auto;
+        overflow: visible;
+        animation: header-animation ease .5s;
+}
+    #nav li{
+    display: block;
+    position: relative;
+}
+    #nav .js-more{
+        overflow: hidden;
+    }
+    #nav .js-more.open{
+        overflow: visible;
+    }
+    #nav .icon-search{
+        display: none;
+    }
+    #nav .menu-button{
+        display: block;
+    }
+    #nav > li:first-child{
+        display: inline-block;
+    }
+    #nav .subnav{
+        width: 100%;
+    }
+    #nav .subnav li{
+        width: 100%;
+        overflow: visible;
+    }
+    .w3-card .w3-third-card{
+        float: none;
+        width: 100%;
+        margin-bottom: 32px;
+    }
+    .contact-column.info-fill .fill-infor{
+        margin: 0;
+    }
+    .contact-row .contact-column,.contact-column.info-fill .fill.name ,.contact-column.info-fill .fill.message ,.contact-column.info-fill .fill.email, .contact-column.info-fill .fill-button,.w3-third-card-container .card-button{
+        width: 100%;
+        margin: 8px 0;
+    }
+    .contact-column.info-fill .fill.name , .fill.email{
+        float: none;
+        
+    }
+   
+    @keyframes header-animation {
+    from {
+            height: 46px;
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+        to {
+            height: auto;
+            opacity: 1;
+            transform: translateY(0);
+        }
+}
+}

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/style.css"> 
+    <link rel="stylesheet" href="./assets/css/responsive.css"> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>W3-Brand</title>
 </head>
@@ -20,14 +21,14 @@
  -->    
     <div id="main">
         <!-- Header Section-->
-        <div id="header">
+        <div id="header" class="js-header">
             <nav>
                 <ul id="nav">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#band">Band</a></li>
-                    <li><a href="#tour">Tour</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <li> <a href="#more">More ▾</a>                   
+                    <li><a class="js-tab-close" href="#home">Home</a></li>
+                    <li><a class="js-tab-close" href="#band">Band</a></li>
+                    <li><a class="js-tab-close" href="#tour">Tour</a></li>
+                    <li><a class="js-tab-close" href="#contact">Contact</a></li>
+                    <li class="js-more"> <a class="MoreTab" href="#more">More ▾</a>                   
                     <ul class="subnav">
                         <li>Merchandise</li>
                         <li>Extras</li> 
@@ -35,6 +36,7 @@
                     </ul>
                 </li>
                 <li class="icon-search"><i class="fa fa-search"></i></li>
+                <li class="menu-button js-menu-button"><i class="fa fa-list"></i></li>
                 </ul>
             </nav>
         </div>
@@ -127,22 +129,23 @@
                      Chicago, US           
                      <br>
                      <i class="fa fa-phone"></i> 
-                     Phone: +00 151515
+                     Phone: <a href="tel:+00 151515">+00 151515</a>
                      <br>
                      <i class="fa fa-envelope"></i>
-                     Email: mail@mail.com         
+                     Email: <a href="mailto:mail@mail.com">mail@mail.com</a>         
                     </div>
                      <div class="contact-column info-fill">
                         <form action="">
                         <div class="fill-infor">
-                        <input class="fill name" type="text" placeholder="Name">
-                          <input class="fill email" type="text" placeholder="Email">
+                            <!-- Thuộc tính required nó chỉ hoạt động khi thẻ input và button trong 
+                             form và button có thuộc tính type="submit" -->
+                        <input class="fill name"  type="text" placeholder="Name" required>
+                          <input class="fill email" required type="text" placeholder="Email">
                            <div class="clear"></div>
                         </div>
-                           <input class="fill message" type="text" placeholder="Message">
-                            </form>
-                               <button class="fill-button">SEND</button>
-                               
+                           <input class="fill message" required type="text" placeholder="Message">
+                            <button class="fill-button" type="submit">SEND</button>
+                            </form>        
                      </div>      
                      <div class="clear"></div>            
                 </div>                
@@ -218,7 +221,26 @@
         popupContainer.addEventListener('click',function (event) {
             event.stopPropagation()
         })
+        // Đóng mở Header trên Mobile
+        const header = document.querySelector('.js-header')
+        const menuBTN = document.querySelector('.js-menu-button')
+        const aTabs = document.querySelectorAll('.js-tab-close')
 
+        function showandhideHeaderMenu(){
+            // toggle() sẽ thêm class nếu chưa có và xóa class nếu đã có - chỉ dùng cho 1 button
+            header.classList.toggle('open')
+        }
+        menuBTN.addEventListener('click',showandhideHeaderMenu)
+        for(const aTab of aTabs){
+            aTab.addEventListener('click',showandhideHeaderMenu)
+        }
+        // Đóng mở tab More trên Mobile
+        const toggleMore = document.querySelector('.js-more')
+        const btnMoreTab = document.querySelector('.MoreTab')
+        function showandhideMoreTab(){
+            toggleMore.classList.toggle('open')
+        }
+        btnMoreTab.addEventListener('click',showandhideMoreTab)
     </script>
 </body>
 </html>
