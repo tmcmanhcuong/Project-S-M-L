@@ -1,0 +1,126 @@
+:root {
+    /* Colors */
+    --color-primary: hsl(75, 94%, 57%);
+    --color-dark: hsl(0, 0%, 8%);
+    --color-gray: hsl(0, 0%, 20%);
+    --color-white: hsl(0, 0%, 100%);
+    --color-card-bg: hsl(0, 0%, 12%);
+
+    /* Spacing */
+    --spacing-xs: 8px;
+    --spacing-sm: 12px;
+    --spacing-md: 16px;
+    --spacing-lg: 24px;
+    --spacing-xl: 40px;
+
+    /* Border radius */
+    --radius-round: 50%;
+    --radius-card: 16px;
+    --radius-button: 8px;
+}
+@font-face {
+  font-family: 'Inter-F';          /* đặt tên cho font */
+  src: url('../Fonts/Inter-VariableFont.ttf') format('truetype');
+  font-weight: 100 900;                  /* có thể khai báo thêm bold, italic */
+  font-style: normal italic;
+}
+
+/* Base styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Inter-F", Arial, sans-serif;
+    line-height: 1.5;
+    min-height: 100vh;
+    background-color: var(--color-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Card Component */
+.social-card {
+    width: 400px;
+    background-color: var(--color-card-bg);
+    color: var(--color-white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: var(--radius-card);
+    padding: var(--spacing-xl) 0;
+}
+
+/* Profile Section */
+.social-card__logo {
+    margin-bottom: var(--spacing-sm);
+}
+
+.social-card__logo img {
+    width: 80px;
+    border-radius: var(--radius-round);
+}
+
+/* Content Section */
+.social-card__content {
+    text-align: center;
+    margin-bottom: var(--spacing-lg);
+}
+
+.social-content__name {
+    font-weight: 700;
+    margin-bottom: var(--spacing-xs);
+}
+
+.social-content__country {
+    color: var(--color-primary);
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: var(--spacing-lg);
+}
+
+/* Button Section */
+.social-card__button {
+    width: 100%;
+    text-align: center;
+    /* padding: 0 var(--spacing-xl); */
+}
+
+.social-button {
+    width: 320px;
+    height: 40px;
+    margin-bottom: var(--spacing-md);
+    background-color: var(--color-gray);
+    color: var(--color-white);
+    border: none;
+    border-radius: var(--radius-button);
+    font-weight: 700;
+    font-size:16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.social-button:last-child {
+    margin-bottom: 0;
+}
+
+.social-button:hover {
+    background-color: var(--color-primary);
+    color: var(--color-gray);
+}
+
+/*  Mobile Responsive */
+@media screen and (max-width: 46.1875em) {
+    .social-card {
+        width: min(325px, 90%);
+    }
+    .social-button{
+        width: 280px;
+    }
+    .social-content__info{
+        font-size: 14px;
+    }
+}
